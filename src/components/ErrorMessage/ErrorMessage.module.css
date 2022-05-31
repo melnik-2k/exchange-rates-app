@@ -1,0 +1,14 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.message {
+    background-color: #4825af;
+    color: white;
+    padding: 100px;
+    font-size: 35px;
+    border-radius: 75px;
+}

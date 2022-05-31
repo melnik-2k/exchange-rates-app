@@ -4,16 +4,18 @@ import Header from "./Header/Header";
 import ConvertCurrencies from "./ConvertCurrencies/ConvertCurrencies";
 import useCurrencies from "../hooks/useCurrencies";
 import CurrenciesContext from "../contexts/CurrenciesContext";
+import Loader from "./Loader/Loader";
+import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 const App = () => {
     const {currencies, error, isLoading} = useCurrencies();
 
     if(isLoading) {
-        return <div>Loading</div>
+        return <Loader/>
     }
 
     if(error) {
-        return <div>error</div>
+        return <ErrorMessage messageError={error}/>
     }
 
     return (
