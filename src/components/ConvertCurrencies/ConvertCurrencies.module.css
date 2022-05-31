@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.inputs {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4825af;
+    width: 300px;
+    border-radius: 20px;
+}
