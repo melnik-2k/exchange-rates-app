@@ -4,7 +4,7 @@ import ConvertInput from "./ConvertInput/ConvertInput";
 import CurrenciesContext from "../../contexts/CurrenciesContext";
 
 const ConvertCurrencies = () => {
-    const {currencies, error, isLoading} = useContext(CurrenciesContext);
+    const {currencies} = useContext(CurrenciesContext);
     const uah = currencies.find((currency) => currency.name.toLowerCase() === 'uah');
     const eur = currencies.find((currency) => currency.name.toLowerCase() === 'eur');
 
@@ -31,24 +31,24 @@ const ConvertCurrencies = () => {
         }
     }, [secondAmount, secondCurrency]);
 
-    if (isLoading) {
-        return <div>Loading...</div>
-    }
-
-    if (error) {
-        return <div>Error with message: {error}</div>
-    }
-
     return (
         <main>
             <div className="container">
                 <div className={style.wrap}>
                     <h1 className={style.title}>Convert currencies</h1>
                     <div className={style.inputs}>
-                        <ConvertInput currency={firstCurrency} setCurrency={setFirstCurrency} amount={firstAmount}
-                                      setAmount={setFirstAmount}/>
-                        <ConvertInput currency={secondCurrency} setCurrency={setSecondCurrency} amount={secondAmount}
-                                      setAmount={setSecondAmount}/>
+                        <ConvertInput
+                            currency={firstCurrency}
+                            setCurrency={setFirstCurrency}
+                            amount={firstAmount}
+                            setAmount={setFirstAmount}
+                        />
+                        <ConvertInput
+                            currency={secondCurrency}
+                            setCurrency={setSecondCurrency}
+                            amount={secondAmount}
+                            setAmount={setSecondAmount}
+                        />
                     </div>
                 </div>
             </div>

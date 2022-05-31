@@ -14,8 +14,6 @@ const Header = () => {
                 <div className={style.headerWrap}>
                     <h3 className={style.logo}>Exchange Rates</h3>
                     <div className={style.currencies}>
-                        { isLoading && <div>Loading...</div> }
-                        { error && <div style={{color: 'red'}}>Error with message: {error}</div> }
                         {
                             currenciesToRender.map((currency) => (
                                 <div key={currency.isoCode} className={style.currencyItem}>

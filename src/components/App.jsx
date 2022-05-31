@@ -1,5 +1,4 @@
 import React from 'react';
-import style from './App.module.css';
 import Header from "./Header/Header";
 import ConvertCurrencies from "./ConvertCurrencies/ConvertCurrencies";
 import useCurrencies from "../hooks/useCurrencies";

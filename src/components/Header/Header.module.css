@@ -3,6 +3,10 @@
     color: white;
 }
 
+.logo {
+    font-size: 34px;
+}
+
 .headerWrap {
     display: flex;
     height: 75px;
